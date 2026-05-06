@@ -7,7 +7,7 @@ def target_fn(x):
     return np.exp(-x**2 / 2)
 
 def symmetric_proposal(current_x, stepsize=1):
-    updated_x = current_x + np.random.uniform(-stepsize, stepsize)
+    updated_x = current_x + np.random.normal(0, stepsize)
     return updated_x
 
 def metropolis_sampler(num_samples, initial_x, stepsize=1):
